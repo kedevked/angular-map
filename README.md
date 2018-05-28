@@ -24,12 +24,22 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Further help
 
+## Code
+
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Branch use-angular-material
+### Branch use-angular-material
 
 Generate the layout 
 
      ng generate @angular/material:material-table --name app-layout
+
+### Branch display-google-map
+
+Install [AGM](https://github.com/SebastianM/angular-google-maps)
+
+    npm install @agm/core --save
+    
+Import the module in the `app.module.ts` file
 
 

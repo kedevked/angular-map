@@ -1,0 +1,4 @@
+/*important for the map to be displayed*/
+agm-map {
+  height: 90vh;
+}

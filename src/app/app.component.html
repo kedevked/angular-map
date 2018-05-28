@@ -1,1 +1,10 @@
 <app-layout></app-layout>
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
+  <agm-marker *ngFor="let m of markers; let i = index"
+              [latitude]="m.lat"
+              [longitude]="m.lng">
+    <agm-info-window>
+      <strong>{{m.label}}</strong>
+    </agm-info-window>
+  </agm-marker>
+</agm-map>
