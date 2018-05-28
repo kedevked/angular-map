@@ -22,4 +22,7 @@ Install [AGM](https://github.com/SebastianM/angular-google-maps)
     
 Import the module in the `app.module.ts` file
 
+### Branch template-variable
 
+The template variable `#infowindow` allows to close the previous infowindow.
+More on [template variable](https://angular.io/guide/template-syntax#template-reference-variables--var-)

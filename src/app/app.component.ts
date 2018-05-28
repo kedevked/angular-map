@@ -47,7 +47,11 @@ export class AppComponent {
     }
   ];
 
-  clickedMarker(infowindow, i) {
+  clickedMarker(infowindow) {
+    if (this.previous) {
+      this.previous.close();
+    }
+    this.previous = infowindow;
     console.log('click');
   }
 
