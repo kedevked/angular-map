@@ -34,3 +34,12 @@ to input event).
 `new FormControl()` create a directive that allows to manage a FormControl instance directly inside the template (the 
 input is bound to `search' inside the component via what is called an [input binding](https://angular.io/guide/component-interaction#pass-data-from-parent-to-child-with-input-binding)).
 
+### Branch use-service
+
+generate a service
+    
+    ng g s app 
+    
+The above is a shorthand for `ng generate service app`
+
+The list of markers is fetched from the service
