@@ -1,8 +1,9 @@
-<app-layout></app-layout>
+<app-layout (clickLocation)="openInfoWindow($event)"></app-layout>
 <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom">
   <agm-marker *ngFor="let m of markers; let i = index"
               [latitude]="m.lat"
               [longitude]="m.lng"
+              [title]="m.label"
               (markerClick)="clickedMarker(infowindow)">
     <agm-info-window #infowindow>
       <strong>{{m.label}}</strong>

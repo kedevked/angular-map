@@ -18,7 +18,7 @@
 
     <mat-nav-list>
       <ng-template ngFor let-location [ngForOf]="filterLocation$ | async">
-        <a mat-list-item href="#">{{location}}</a>
+        <a mat-list-item (click)="openInfoWindow(location)">{{location}}</a>
       </ng-template>
     </mat-nav-list>
   </mat-sidenav>

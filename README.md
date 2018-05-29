@@ -51,3 +51,9 @@ Subject are both Observable and Observer.
 They have the advantage of being an Observable to stream data, but can also invoke the `next()` method in order to change that 
 stream at some point in time.
 
+### Branch component-interaction
+
+It uses the [event binding](https://angular.io/guide/component-interaction#parent-listens-for-child-event) to pass data
+from child `layout.component` to parent `app.component`.
+Also, [@ViewChildren](https://angular.io/guide/component-interaction#parent-calls-an-viewchild) allows the parent 
+`app.component` to get access to the children `AgmMarker` making possible to call children methods from the parent.
