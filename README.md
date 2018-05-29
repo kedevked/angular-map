@@ -1,13 +1,33 @@
 # AngularMap
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.5.
+## Requirements
+ - [NodeJs](https://nodejs.org/en/) version 8+
+ - [Angular CLI](https://github.com/angular/angular-cli) version 6+
 
+## Installation
+
+Install all the dependencies of the project
+
+    npm install
+    
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code
 
+The code contains many branches to help building the project step by step
+
+ - list of all branches
+
+      ```
+     git branch
+
+ - change to a specific branch: the readme of each branch details briefly what has changed
+     
+     ```
+     git checkout < name-of-branch > 
+  
 ### Branch use-angular-material
 
 Generate the layout 
@@ -57,3 +77,10 @@ It uses the [event binding](https://angular.io/guide/component-interaction#paren
 from child `layout.component` to parent `app.component`.
 Also, [@ViewChildren](https://angular.io/guide/component-interaction#parent-calls-an-viewchild) allows the parent 
 `app.component` to get access to the children `AgmMarker` making possible to call children methods from the parent.
+
+## Contribution
+
+As part of the FEND nanodegree, this project aims at helping to get start with Angular by doing an Angular version of 
+the 8th project (interacting with google map in React).
+
+Pull requests by Udacians will be welcomed because it is always #betterTogether
