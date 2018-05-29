@@ -4,6 +4,7 @@ import {Observable} from 'rxjs';
 import { map } from 'rxjs/operators';
 import {delay, startWith} from 'rxjs/internal/operators';
 import {FormControl} from '@angular/forms';
+import {AppService} from '../app.service';
 
 @Component({
   selector: 'app-layout',
@@ -23,6 +24,7 @@ export class LayoutComponent implements OnInit {
       .pipe(
       map((e: string) => {
           const value = e;
+          this.appService.setQuery(e);
           return value ? this.locations
               .filter(l => l.toLowerCase().includes(value.toLowerCase()))
             : this.locations;
@@ -31,5 +33,7 @@ export class LayoutComponent implements OnInit {
       startWith(this.locations),
       delay(0));
   }
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  constructor(
+    private breakpointObserver: BreakpointObserver,
+    private appService: AppService) {}
 }

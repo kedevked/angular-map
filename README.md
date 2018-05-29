@@ -43,3 +43,11 @@ generate a service
 The above is a shorthand for `ng generate service app`
 
 The list of markers is fetched from the service
+
+### Branch different-types-observables
+
+Use of a BehaviorSubject in the service so as to have a Subject with an initial value. 
+Subject are both Observable and Observer. 
+They have the advantage of being an Observable to stream data, but can also invoke the `next()` method in order to change that 
+stream at some point in time.
+

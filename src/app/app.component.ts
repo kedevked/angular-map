@@ -14,7 +14,8 @@ export class AppComponent implements OnInit {
   markers;
   constructor(private appService: AppService) {}
   ngOnInit() {
-    this.markers = this.appService.getMarkers();
+    this.appService.getMarkers()
+      .subscribe(markers => this.markers = markers);
   }
 
   clickedMarker(infowindow) {

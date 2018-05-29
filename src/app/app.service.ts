@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {BehaviorSubject, Observable} from 'rxjs';
 
 // just an interface for type safety.
 export interface Marker {
@@ -11,8 +12,8 @@ export interface Marker {
   providedIn: 'root'
 })
 export class AppService {
-
   constructor() { }
+  search = null;
   markers: Marker[] = [
     {
       lat: 45.1931492,
@@ -40,8 +41,18 @@ export class AppService {
       label: 'Mall'
     }
   ];
-  getMarkers() {
-    return this.markers;
+  behaviorSubject = new BehaviorSubject(this.markers);
+  getMarkers(): Observable<Marker[]> {
+    return this.behaviorSubject.asObservable();
   }
 
+  filterLocation = (query) => {
+    return this.markers
+      .filter(m => m.label.toLowerCase().includes(query.toLowerCase()));
+  }
+
+  setQuery(s: string) {
+    this.search = s;
+    this.behaviorSubject.next(this.filterLocation(s));
+  }
 }
